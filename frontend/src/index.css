@@ -1,0 +1,50 @@
+
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/inter";
+@import "@fontsource/noto-nastaliq-urdu/400.css";
+@import "./styles/theme.css";
+
+:root {
+  font-family: "Inter Variable", sans-serif;
+  color: #223c35;
+  background: #f6f8f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7a9b89;
+  outline-offset: 3px;
+}
+
+.urdu-text {
+  font-family: "Noto Nastaliq Urdu", serif;
+  line-height: 2.5;
+  direction: rtl;
+}
+
+#root {
+  min-height: 100vh;
+}

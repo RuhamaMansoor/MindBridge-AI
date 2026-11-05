@@ -1,0 +1,88 @@
+
+/* MindBridge AI — Sage Serenity Design System */
+
+:root {
+  /* Brand colors */
+  --sage-50: #f6f8f4;
+  --sage-100: #edf3ec;
+  --sage-200: #dde9df;
+  --sage-300: #bfd2c3;
+  --sage-400: #9bb7a3;
+  --sage-500: #7a9b89;
+  --sage-600: #527b68;
+  --sage-700: #355b51;
+  --sage-800: #294a40;
+  --sage-900: #223c35;
+
+  /* Semantic colors */
+  --color-bg: #f6f8f4;
+  --color-surface: #ffffff;
+  --color-sidebar: #edf3ec;
+  --color-surface-soft: #f0f5ef;
+  --color-text: #223c35;
+  --color-text-secondary: #62796b;
+  --color-text-muted: #71867a;
+  --color-primary: #355b51;
+  --color-primary-hover: #294a40;
+  --color-border: #dce7dc;
+  --color-focus: #7a9b89;
+
+  /* Typography */
+  --font-heading: "Plus Jakarta Sans Variable", sans-serif;
+  --font-body: "Inter Variable", sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(34, 60, 53, 0.035);
+  --shadow-md: 0 8px 28px rgba(34, 60, 53, 0.055);
+  --shadow-lg: 0 16px 48px rgba(34, 60, 53, 0.075);
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* Dark mode */
+.app-shell.dark {
+  --color-bg: #172720;
+  --color-surface: #21382f;
+  --color-sidebar: #1c3028;
+  --color-surface-soft: #284338;
+  --color-text: #eaf2eb;
+  --color-text-secondary: #c3d2c7;
+  --color-text-muted: #b1c3b7;
+  --color-primary: #8bb7a0;
+  --color-primary-hover: #b2d5bd;
+  --color-border: #365248;
+  --color-focus: #a4c8b0;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.14);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+  }
+}

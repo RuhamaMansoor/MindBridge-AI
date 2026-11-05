@@ -1,0 +1,50 @@
+
+# MindBridge AI - Root Git Ignore
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backup archives and temporary files
+*.zip
+*.bak
+*_backup_*.py
+main_before_*.py
+
+# Private keys
+*.pem
+*.key

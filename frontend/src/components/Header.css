@@ -1,0 +1,198 @@
+
+.mb-header {
+  min-height: 82px;
+  flex-shrink: 0;
+  padding: 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.mb-header-left,
+.mb-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mb-header-heading {
+  min-width: 0;
+}
+
+.mb-header-eyebrow {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: var(--color-text-muted);
+  margin-bottom: 5px;
+}
+
+.mb-header-heading h1 {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.mb-header-icon-button {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.mb-header-icon-button:hover {
+  background: var(--color-surface-soft);
+  transform: translateY(-1px);
+}
+
+.mb-header-language {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.mb-header-language select {
+  max-width: 125px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.mb-header-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mb-header-menu {
+    display: grid;
+  }
+
+  .mb-header {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .mb-header {
+    min-height: 72px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .mb-header-left,
+  .mb-header-actions {
+    gap: 8px;
+  }
+
+  .mb-header-heading h1 {
+    font-size: 13px;
+  }
+
+  .mb-header-eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .mb-header-language {
+    padding: 0 8px;
+    gap: 5px;
+  }
+
+  .mb-header-language select {
+    max-width: 78px;
+    font-size: 11px;
+  }
+
+  .mb-header-icon-button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mb-header-eyebrow {
+    display: none;
+  }
+
+  .mb-header-language select {
+    max-width: 65px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mb-header-icon-button {
+    transition: none;
+  }
+}
+
+
+/* MindBridge AI — Compact Premium Header */
+
+.mb-header {
+  min-height: 60px;
+  height: 60px;
+  padding: 0 30px;
+}
+
+.mb-header-eyebrow {
+  font-size: 9px;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.mb-header-heading h1 {
+  font-size: 15px;
+}
+
+.mb-header-icon-button {
+  width: 35px;
+  height: 35px;
+}
+
+.mb-header-language {
+  min-height: 35px;
+  padding: 0 10px;
+}
+
+@media (max-width: 900px) {
+  .mb-header {
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .mb-header {
+    min-height: 56px;
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .mb-header-heading h1 {
+    font-size: 13px;
+  }
+}
+

@@ -1,0 +1,263 @@
+
+/* MindBridge AI — Premium Welcome Screen */
+
+.mb-welcome {
+  width: min(1040px, 100%);
+  margin: auto;
+  padding: 24px 28px 20px;
+  color: var(--color-text);
+}
+
+/* Hero Section */
+
+.mb-welcome-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 34px 42px;
+  background:
+    radial-gradient(
+      ellipse at 88% 85%,
+      rgba(122, 155, 137, 0.20),
+      transparent 42%
+    ),
+    linear-gradient(
+      125deg,
+      var(--color-surface-soft),
+      var(--color-sidebar)
+    );
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.mb-welcome-intro::before {
+  content: "";
+  position: absolute;
+  right: -75px;
+  bottom: -115px;
+  width: 320px;
+  height: 250px;
+  border-radius: 60% 40% 0 0;
+  background: rgba(122, 155, 137, 0.10);
+  transform: rotate(-25deg);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.mb-welcome-intro::after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  bottom: -65px;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(122, 155, 137, 0.20);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.mb-welcome-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-primary);
+}
+
+.mb-welcome-intro h2 {
+  position: relative;
+  max-width: 720px;
+  margin: 19px 0 12px;
+  font-family: var(--font-heading);
+  font-size: clamp(29px, 3vw, 42px);
+  font-weight: 750;
+  line-height: 1.22;
+  letter-spacing: -1.7px;
+}
+
+.mb-welcome-intro h2 em {
+  font-style: normal;
+  color: var(--sage-500);
+}
+
+.mb-welcome-intro p {
+  position: relative;
+  max-width: 620px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* Section Heading */
+
+.mb-welcome-section-title {
+  margin: 26px 3px 15px;
+}
+
+.mb-welcome-section-title h3 {
+  margin: 0 0 5px;
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.mb-welcome-section-title p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Wellness Cards */
+
+.mb-welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mb-welcome-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 82px;
+  padding: 14px 17px;
+  text-align: left;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.mb-welcome-card:hover:not(:disabled) {
+  border-color: var(--sage-400);
+  box-shadow: var(--shadow-md);
+}
+
+.mb-welcome-card:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.mb-welcome-card:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.mb-welcome-card-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--color-surface-soft);
+  color: var(--color-primary);
+}
+
+.mb-welcome-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.mb-welcome-card-content strong {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mb-welcome-card-content small {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.mb-welcome-card-arrow {
+  align-self: center;
+  color: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+.mb-welcome-footer {
+  margin: 17px 0 0;
+  text-align: center;
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .mb-welcome {
+    padding: 22px 20px;
+  }
+
+  .mb-welcome-intro {
+    padding: 30px;
+  }
+
+  .mb-welcome-intro h2 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .mb-welcome {
+    padding: 16px 14px;
+  }
+
+  .mb-welcome-intro {
+    padding: 26px 22px;
+    border-radius: 20px;
+  }
+
+  .mb-welcome-intro h2 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  .mb-welcome-intro p {
+    font-size: 12px;
+  }
+
+  .mb-welcome-section-title {
+    margin: 23px 2px 13px;
+  }
+
+  .mb-welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .mb-welcome-card {
+    min-height: 76px;
+    padding: 12px 14px;
+  }
+
+  .mb-welcome-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .mb-welcome-card {
+    transition: none;
+  }
+}
