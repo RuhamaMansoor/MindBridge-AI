@@ -422,6 +422,7 @@ def configure_language(
 # 7. SECURITY HELPERS
 # ==================================================
 
+
 def validate_request_origin(
     http_request: Request,
 ) -> None:
@@ -438,7 +439,12 @@ def validate_request_origin(
         "sec-fetch-site"
     )
 
-    if fetch_site == "cross-site":
+    # Cross-site requests are permitted only when their
+    # Origin header matches our explicit allowlist.
+    if fetch_site == "cross-site" and (
+        origin is None
+        or origin.rstrip("/") not in ALLOWED_ORIGINS
+    ):
         raise HTTPException(
             status_code=403,
             detail="Cross-site request denied.",
@@ -468,7 +474,7 @@ def set_session_cookie(
         value=token,
         httponly=True,
         secure=IS_PRODUCTION,
-        samesite="strict",
+        samesite="none" if IS_PRODUCTION else "strict",
         max_age=SESSION_MAX_AGE,
         path="/",
     )
